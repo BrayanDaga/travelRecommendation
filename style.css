@@ -1,100 +1,85 @@
+@import url('navbar.css');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-header {
-  background-color: #0f2c3b;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  position: sticky;
-  height: 64px;
-  padding: 12px 0;
+body {
+  position: relative;
 }
 
-header .logo {
-  width: 220px;
-  font-style: italic;
-}
-
-header .logo .logo-link {
+.social {
+  top: calc(50vh - 64px);
+  left: 40px;
+  position: fixed;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  height: 46px;
   gap: 10px;
-  font-size: 2rem;
-  text-decoration: none;
 }
 
-header .logo img {
-  height: 100%;
-}
-
-header a {
+.social a {
   color: white;
-  font-size: 1.25rem;
-}
-
-header nav ul {
-  display: flex;
-  justify-content: space-between;
-  gap: 14px;
-}
-
-header nav ul li {
-  list-style-type: none;
-}
-
-
-header nav ul li a {
   text-decoration: none;
+  font-size: 2.4rem;
 }
 
-.search {
-  background-color: white;
-  width: 420px;
-  padding: 8px 20px;
-  border-radius: 40px;
+section.hero {
+  height: calc(100vh - 64px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.214)), url('new-york.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 0 180px;
 }
 
+section.hero .content {
+  width: 56%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 16px;
+}
 
-.search button {
+section.hero .content h1 {
+  font-size: 3.2rem;
+  margin-bottom: 20px;
+}
+
+section.hero .content button {
   all: unset;
   cursor: pointer;
-  background-color: #15847d;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 10px;
-  font-size: 1.06rem;
+  padding: 8px 16px;
+  background-color: #004D40;
 }
 
-#inputSearch {
-  font-size: 1rem;
-  width: 240px;
-  border: none;
-  padding: 8px 4px;
-}
+
 
 @media (max-width: 880px) {
-  header {
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 4px;
+  section.hero {
+    padding: 100px 0 0 0;
     align-items: center;
-    height: 190px;
+    justify-content: start;
+
   }
 
-
-  .search #inputSearch {
-    width: 100%;
-  }
-}
-
-@media (max-width: 560px) {
-  .search {
+  section.hero .content {
     width: 80%;
+    padding: 0;
   }
 
+  section.hero .content h1 {
+    font-size: 2.4rem;
+  }
+
+  .social {
+    display: none;
+  }
 }
