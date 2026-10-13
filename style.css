@@ -6,14 +6,8 @@
   box-sizing: border-box;
 }
 
-body {
-  position: relative;
-}
 
 .social {
-  top: calc(50vh - 64px);
-  left: 40px;
-  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -27,21 +21,21 @@ body {
 }
 
 section.hero {
-  height: calc(100vh - 64px);
+  height: calc(100vh - 74px);
   background-image: linear-gradient(rgba(0, 0, 0, 0.214)), url('new-york.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
   display: flex;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  padding: 0 180px;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0 100px;
+  gap: 100px;
 }
 
 section.hero .content {
-  width: 56%;
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -61,13 +55,48 @@ section.hero .content button {
 }
 
 
+.about {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.about>div:nth-child(2) {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.about h1 {
+  font-size: 5rem;
+}
+
+.about h2 {
+  font-size: 3.5rem;
+  max-width: 200px;
+}
+
+.about .card {
+  max-width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+}
+
+.about .card .user {
+  font-size: 40px;
+}
+
 
 @media (max-width: 880px) {
   section.hero {
-    padding: 100px 0 0 0;
+    padding: 80px 0;
+    flex-direction: column;
+    gap: 60px;
     align-items: center;
     justify-content: start;
-
   }
 
   section.hero .content {
@@ -79,7 +108,37 @@ section.hero .content button {
     font-size: 2.4rem;
   }
 
-  .social {
-    display: none;
+
+  section.hero .about {
+    gap: 20px;
+  }
+
+
+
+  section.hero .social {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 580px) {
+  section.hero {
+    padding: 80px 0;
+    flex-direction: column;
+    gap: 60px;
+    height: auto;
+  }
+
+  section.hero .social {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  section.hero .about h1 {
+    font-size: 3.2rem;
+  }
+
+  section.hero .about h2 {
+    font-size: 2.8rem;
   }
 }
