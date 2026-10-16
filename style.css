@@ -22,7 +22,7 @@
 
 section.hero {
   height: calc(100vh - 74px);
-  background-image: linear-gradient(rgba(0, 0, 0, 0.214)), url('new-york.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('new-york.jpg');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -45,6 +45,10 @@ section.hero .content {
 section.hero .content h1 {
   font-size: 3.2rem;
   margin-bottom: 20px;
+}
+
+section.hero .content p {
+  font-size: 1.3rem;
 }
 
 section.hero .content button {
@@ -83,12 +87,17 @@ section.hero .content button {
   align-items: center;
   justify-content: center;
   gap: 14px;
+  text-align: center;
 }
 
 .about .card .user {
   font-size: 40px;
 }
 
+.about .card .title-user {
+  font-weight: bold;
+  font-size: 1.6rem;
+}
 
 @media (max-width: 880px) {
   section.hero {
