@@ -32,7 +32,7 @@ section.hero {
   align-items: center;
   justify-content: space-around;
   padding: 0 100px;
-  gap: 100px;
+  gap: 60px;
 }
 
 section.hero .content {
@@ -99,6 +99,66 @@ section.hero .content button {
   font-size: 1.6rem;
 }
 
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.contact h1 {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+.contact p {
+  font-size: 1.8rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.contact form .form-group {
+  display: flex;
+  flex-direction: column;
+  width: 460px;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+.form-group .form-control {
+  background-color: transparent;
+  padding: 6px 12px;
+  font-size: 1rem;
+  border: 1px solid rgb(193, 193, 193);
+  color: white;
+  border-radius: 6px;
+}
+
+.form-group button {
+  border: none;
+  cursor: pointer;
+  background-color: #004D40;
+  padding: 8px 16px;
+  font-size: 1.05rem;
+  border-radius: 6px;
+  color: white;
+}
+
+.form-group button:hover,
+button:active {
+  background-color: #004136;
+}
+
+textarea.form-control {
+  height: 82px;
+}
+
 @media (max-width: 880px) {
   section.hero {
     padding: 80px 0;
@@ -122,7 +182,9 @@ section.hero .content button {
     gap: 20px;
   }
 
-
+  section.hero .contact {
+    flex-direction: column;
+  }
 
   section.hero .social {
     flex-direction: row;
@@ -143,11 +205,11 @@ section.hero .content button {
     gap: 20px;
   }
 
-  section.hero .about h1 {
+  section.hero h1 {
     font-size: 3.2rem;
   }
 
-  section.hero .about h2 {
+  section.hero h2 {
     font-size: 2.8rem;
   }
 }
