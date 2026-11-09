@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+.d-none {
+  display: none !important;
+}
+
 
 .social {
   display: flex;
@@ -212,4 +216,33 @@ textarea.form-control {
   section.hero h2 {
     font-size: 2.8rem;
   }
+}
+
+
+#results {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  align-items: stretch;
+  gap: 16px;
+  width: 100%;
+  padding: 10px;
+}
+
+#results .card {
+  background-color: white;
+  padding: 8px;
+  border-radius: 8px;
+  color: black;
+}
+
+#results .card h4 {
+  font-size: 28px;
+}
+
+#results .card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  align-self: center;
 }
